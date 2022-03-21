@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1> userID： {{ currentID }}</h1>
+    <h1> user: {{ currentID }}</h1>
   </div>
 </template>
 
@@ -15,6 +15,12 @@ export default {
   created() {
     this.currentID = this.$route.params.id
   },
+  watch: {
+    $route(to, from) {
+      this.currentID = to.params.id
+      console.log('to:', to.params.id, 'from:', from.params.id)
+    }
+  }
 }
 </script>
 
