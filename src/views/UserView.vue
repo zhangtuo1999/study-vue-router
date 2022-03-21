@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1> user: {{ currentID }}</h1>
+    <router-link to="profile">Profile</router-link>  |
+    <router-link to="posts">Posts</router-link>
+    <router-view></router-view>
   </div>
 </template>
 

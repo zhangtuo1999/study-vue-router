@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/user/1">User1</router-link> |
       <router-link to="/user/2">User2</router-link> |
-      <router-link to="/user-Tourry">UserName</router-link> |
+      <router-link to="/user-Tony">UserInfo</router-link>
     </nav>
     <router-view/>
   </div>

@@ -20,13 +20,26 @@ const routes = [
     },
     {
         path: '/user/:id',
-        name: 'user',
-        component: () => import('../views/UserView.vue')
+        component: () => import('../views/UserView.vue'),
+        children: [
+            {
+                path: '',
+                component:()=>import('../views/UserHome.vue')
+            },
+            {
+                path: 'profile',
+                component: () => import('../views/UserProfile.vue'),
+            },
+            {
+                path: 'posts',
+                component: () => import('../views/UserPosts.vue'),
+            }
+        ]
     },
     {
         path: '/user-*',
         name: 'userInfo',
-        component: () => import('../views/UserInfo')
+        component: () => import('../views/UserInfo.vue'),
     },
     {
         path: '*',
