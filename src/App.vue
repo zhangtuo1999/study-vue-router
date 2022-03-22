@@ -3,6 +3,9 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
+      <router-link to="/a">a</router-link> |
+      <router-link to="/redirectToAbout">redirectToAbout</router-link> |
+      <router-link to="/redirectToAbout">a</router-link> |
       <router-link to="/user/1">User1</router-link> |
       <router-link to="/user/2">User2</router-link> |
       <router-link to="/user-Tony">UserInfo</router-link> |
