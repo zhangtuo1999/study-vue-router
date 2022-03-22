@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1> user: {{ currentID }}</h1>
-    <router-link to="profile">Profile</router-link>  |
-    <router-link to="posts">Posts</router-link>
+    <router-link :to="{path:`/user/${currentID}/profile`}">Profile</router-link>  |
+    <router-link to="/user/1/posts">Posts</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -19,9 +19,8 @@ export default {
     this.currentID = this.$route.params.id
   },
   watch: {
-    $route(to, from) {
+    $route(to) {
       this.currentID = to.params.id
-      console.log('to:', to.params.id, 'from:', from.params.id)
     }
   }
 }

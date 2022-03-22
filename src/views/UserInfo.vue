@@ -8,7 +8,7 @@
 export default {
   name: "UserInfo",
   created() {
-    this.currentName = this.$route.params.pathMatch
+    this.currentName = this.$route.params.pathMatch || this.$route.params.userName
   },
   data() {
     return {
