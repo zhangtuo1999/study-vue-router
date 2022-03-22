@@ -22,6 +22,7 @@ const routes = [
     },
     {
         path: '/user/:id',
+        props: true,
         component: () => import('../views/UserView.vue'),
         children: [
             {
