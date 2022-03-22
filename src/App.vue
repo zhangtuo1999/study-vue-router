@@ -6,7 +6,9 @@
       <router-link to="/user/1">User1</router-link> |
       <router-link to="/user/2">User2</router-link> |
       <router-link to="/user-Tony">UserInfo</router-link> |
-      <router-link :to="{name:'school',params:{schoolName:'BUCT'}}">School</router-link>
+      <router-link :to="{name:'school',params:{schoolName:'BUCT'}}">School</router-link>  |
+      <router-link to="/settings/email">email</router-link> |
+      <router-link to="/settings/profile">profile</router-link>
     </nav>
     <router-view/>
   </div>

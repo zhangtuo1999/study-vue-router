@@ -5,6 +5,7 @@
     <button @click="$router.push({path:'/'})">跳转到Home</button>
     <button @click="$router.push({name:'user',params:{id:'1'}})">跳转到User</button>
     <button @click="$router.push({path:'/user',params:{id:'1'}})">跳转到User</button>
+    <button @click="$router.push({path:'/user',params:{id:'1'}})">跳转到User</button>
   </div>
 </template>
 <script>

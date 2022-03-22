@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import UserSettings from "@/views/Settings/UserSettings";
 
 Vue.use(VueRouter)
 
@@ -46,6 +47,27 @@ const routes = [
         path: '/school/:schoolName',
         name: 'school',
         component: () => import('../views/School.vue'),
+    },
+    {
+        path: '/settings',
+        name: 'settings',
+        component: UserSettings,
+        children: [
+            {
+                path: 'email',
+                name: 'email',
+                component: () => import('../views/Settings/UserEmailSubscriptions')
+            },
+            {
+                path: 'profile',
+                name: 'profile',
+                components: {
+                    default: () => import('../views/Settings/UserProfile'),
+                    helper: () => import('../views/Settings/UserProfilePreview')
+                }
+            }
+        ]
+
     },
     {
         path: '*',
