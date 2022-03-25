@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import UserSettings from "@/views/Settings/UserSettings";
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,7 +20,10 @@ const routes = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+        component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+        beforeEnter: (to, from, next) => {
+            next()
+        }
     },
     {
         path: '/user/:id',

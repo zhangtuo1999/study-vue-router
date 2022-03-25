@@ -10,6 +10,7 @@
 </template>
 <script>
 export default {
-  methods: {}
+  methods: {},
+
 }
 </script>
